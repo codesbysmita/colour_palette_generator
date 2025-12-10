@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Random Palette Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Palette Lab</h1>
+      <p class="sub">Generate aesthetic 4-color palettes — lock, copy & save favorites.</p>
+    </header>
+
+    <section class="controls">
+      <div class="left-controls">
+        <button id="generateBtn" class="btn">Generate</button>
+        <button id="saveBtn" class="btn outline">Save Favorite</button>
+        <button id="copyAllBtn" class="btn outline">Copy All Hex</button>
+      </div>
+
+      <div class="right-controls">
+        <label class="option">
+          <input type="checkbox" id="bgToggle" checked />
+          Page background
+        </label>
+        <label class="option">
+          <input type="checkbox" id="showHex" checked />
+          Show hex
+        </label>
+      </div>
+    </section>
+
+    <section id="palette" class="palette-grid" aria-live="polite">
+      <!-- Color cards inserted by JS -->
+    </section>
+
+    <hr />
+
+    <section class="favorites">
+      <div class="fav-header">
+        <h2>Favorites</h2>
+        <button id="clearFavs" class="btn danger small">Clear All</button>
+      </div>
+      <div id="favoritesList" class="favorites-list">
+        <!-- favorite palette chips inserted by JS -->
+      </div>
+    </section>
+
+    <div id="toast" class="toast" aria-hidden="true"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
